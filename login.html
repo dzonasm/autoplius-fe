@@ -4,26 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<div class="container-sm mt-5 d-flex flex-column align-items-center mb-5">
-    <h2 class="mb-4">Login</h2>
-    <form class="w-50" id='form'>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-dark">Log in <i class="bi bi-arrow-right-circle"></i></button><br /><br />
-        <a href="./signup">Register</a>
-    </form>
+<body class="d-flex center column">
+<header>
+    <h1 class="login">Log In</h1>
+</header>
+<div class="container">
+    <div class="image">
+        Image
+    </div>
+        <form class="d-flex center column form-container" id='form'>
+            <div class="d-flex column m-10 ">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="d-flex column m-10 ">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn m-10">Log in </button>
+            <a href="./signup" class="register m-10">Register</a>
+        </form>
+
 </div>
 </body>
 <script src="JS/login.js"></script>
