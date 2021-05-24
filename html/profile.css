@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.avatar {
+    height: 150px;
+    width: 170px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.f-jc-center {
+    justify-content: center;
+}
+
+.f-jc-sp-around {
+    justify-content: space-around;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.myPostContainer div{
+    margin: 10px;
+}
+
+.userInfo {
+    background-color: lightskyblue;
+}
+

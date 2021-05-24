@@ -9,6 +9,14 @@
 </head>
 
 <body>
+<nav>
+    <a href="../indexx.html"><button>Home</button></a>
+    <a href="../html/signUp.html "><button>Register</button></a>
+    <a href="../html/login.html "><button>Login</button></a>
+    <a href="../html/profile.html"><button>Profile</button></a>
+    <a href="search.html"><button>Search</button></a>
+    <a onclick="logOut()"><button>Logout</button></a>
+</nav>
 <div class="container-sm mt-5 d-flex flex-column align-items-center mb-5">
     <h2 class="mb-4">Register</h2>
     <form class="w-50" id='form'>
@@ -22,17 +30,17 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputName" class="form-label">Name</label>
-            <input type="name" class="form-control" id="name">
+            <input type="text" class="form-control" id="name">
         </div>
         <div class="mb-3">
             <label for="exampleInputNumber" class="form-label">Phone number</label>
-            <input type="number" class="form-control" id="phoneNumber">
+            <input type="tel" class="form-control" id="phone">
         </div>
 
         <button type="submit" class="btn btn-dark">Register</button>
     </form>
 </div>
 </body>
-<script src="./JS/signUp.js"></script>
+<script src="../JS/signUp.js"></script>
 
 </html>

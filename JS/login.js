@@ -20,17 +20,26 @@ document.getElementById('form').addEventListener('submit', async (e) => {
             },
             body: JSON.stringify(body)
         })
-        if (response.status != 200) throw await response.json()
+        if (response.status !== 200) throw await response.json()
         let token = response.headers.get('userauth')
 
         localStorage.setItem('userauth', token)
-        localStorage.setItem('twitter-user', await JSON.stringify(await response.json()))
-        window.location.href = './'
+        localStorage.setItem('Autoplius-user', await JSON.stringify(await response.json()))
+        window.location.href = '../indexx.html'
     } catch (e) {
         console.log(e)
         alert(e.message)
     }
-
-
-
 })
+
+const logOut = async () => {
+    let response = await fetch(`${url}/user/logOut`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'userauth': token
+        }
+    })
+    localStorage.removeItem('userauth')
+    localStorage.removeItem('Autoplius-user')
+}

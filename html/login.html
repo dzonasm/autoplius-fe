@@ -9,6 +9,14 @@
 </head>
 
 <body>
+<nav>
+    <a href="../indexx.html"><button>Home</button></a>
+    <a href="../html/signUp.html "><button>Register</button></a>
+    <a href="../html/login.html "><button>Login</button></a>
+    <a href="../html/profile.html"><button>Profile</button></a>
+    <a href="search.html"><button>Search</button></a>
+    <a onclick="logOut()"><button>Logout</button></a>
+</nav>
 <div class="container-sm mt-5 d-flex flex-column align-items-center mb-5">
     <h2 class="mb-4">Login</h2>
     <form class="w-50" id='form'>
@@ -22,10 +30,10 @@
             <input type="password" class="form-control" id="password">
         </div>
         <button type="submit" class="btn btn-dark">Log in <i class="bi bi-arrow-right-circle"></i></button><br /><br />
-        <a href="./signup">Register</a>
+        <a href="./signUp.html">Register</a>
     </form>
 </div>
 </body>
-<script src="./JS/login.js"></script>
+<script src="../JS/login.js"></script>
 
 </html>
