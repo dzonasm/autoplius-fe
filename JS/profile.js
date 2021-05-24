@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 const setUpNavBar = async () => {
-    // if (user.profileImage) document.getElementById('navProfileImage').src = user.profileImage
+    if (user.profileImage) document.getElementById('navProfileImage').src = user.profileImage
     document.querySelector('#userPhone').innerHTML = user.phone
     document.querySelector('#userEmail').innerHTML = user.email
 }
@@ -141,47 +141,25 @@ const deleteCarPost = async (id) => {
     })
     location.reload();
 }
-//
-// const updateProfile = async () => {
-//     const formData = new FormData()
-//     let profileImgElement = document.getElementById('profileImageInput')
-//
-//     formData.append('avatar', profileImgElement.files[0])
-//     try {
-//         let response = await fetch(`${url}/user/updateUserInfo`, {
-//             method: "POST",
-//             headers: {
-//                 'userauth': token
-//             },
-//             body: formData
-//         })
-//         if (response.status !== 200) throw await response.json()
-//         user = await response.json()
-//         localStorage.setItem('Autoplius-user', JSON.stringify(user))
-//     } catch (e) {
-//         console.log(e)
-//     }
-//     window.location.reload()
-// }
-//
-// const uploadCar = async () => {
-//     const formData = new FormData()
-//     let uploadingCar = document.querySelector('#carUploadInput')
-//
-//     formData.append('carPicture', uploadingCar.files[0])
-//     try {
-//         let response = await fetch(`${url}/cars/mycars`, {
-//             method: "POST",
-//             headers: {
-//                 'userauth': token
-//             },
-//             body: formData
-//         })
-//         if (response.status !== 200) throw await response.json()
-//         user = await response.json()
-//         localStorage.setItem('Autoplius-user', JSON.stringify(user))
-//     } catch (e) {
-//         console.log(e)
-//     }
-//     window.location.reload()
-// }
+
+const updateProfile = async () => {
+    const formData = new FormData()
+    let profileImgElement = document.getElementById('profileImageInput')
+
+    formData.append('avatar', profileImgElement.files[0])
+    try {
+        let response = await fetch(`${url}/user/updateUserInfo`, {
+            method: "POST",
+            headers: {
+                'userauth': token
+            },
+            body: formData
+        })
+        if (response.status !== 200) throw await response.json()
+        user = await response.json()
+        localStorage.setItem('Autoplius-user', JSON.stringify(user))
+    } catch (e) {
+        console.log(e)
+    }
+    window.location.reload()
+}

@@ -8,13 +8,14 @@ document.getElementById('form').addEventListener('submit', async (event) => {
     let password = document.querySelector('#password').value
     let name = document.querySelector('#name').value
     let phone = document.querySelector('#phone').value
-
+    let confirmPassword = document.querySelector('#confirmPassword').value
 
     if (!email || !password) return alert('Fill in form')
 
     let body = {
         email,
         password,
+        confirmPassword,
         name,
         phone
     }
