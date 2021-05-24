@@ -95,7 +95,6 @@ document.querySelector('#carInfo').addEventListener('submit', async (e) => {
     formData.append('carPrice', carPrice)
     formData.append('carDescription', carDescription)
 
-
     try {
         let response = await fetch(`${url}/cars/mycars`, {
             method: 'POST',
@@ -112,7 +111,7 @@ document.querySelector('#carInfo').addEventListener('submit', async (e) => {
         console.log(data)
 
         document.querySelector('.myPostContainer').value = ''
-        // thanksmessage()
+        thanksmessage()
 
     } catch (e) {
         alert(e)

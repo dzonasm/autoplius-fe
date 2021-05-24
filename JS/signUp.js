@@ -11,14 +11,16 @@ document.getElementById('form').addEventListener('submit', async (event) => {
     let confirmPassword = document.querySelector('#confirmPassword').value
 
     if (!email || !password) return alert('Fill in form')
-
+    if (password !== confirmPassword ) {
+        return alert ('wrong password')
+    }
     let body = {
         email,
         password,
-        confirmPassword,
         name,
         phone
     }
+
     let response = await fetch(`${url}/user/signUp`, {
         method: 'POST',
         headers: {
