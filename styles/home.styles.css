@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: aliceblue;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+}
+
+.nav-link {
+	list-style: none;
+	padding: 12px 8px;
+}
+
+.nav-link:last-child {
+	padding-right: 0;
+}
+
+.hero {
+	padding: 5rem 10rem;
+	background-color: rgb(212, 255, 255);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.cta {
+	width: 120px;
+	padding: 4px 0;
+}
+
+.hero-text {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.hero-text h4 {
+	margin-bottom: 2em;
+}
+
+.hero-text h1 {
+	margin-bottom: 1.2em;
+	font-size: 2em;
+}
+
+.form-label {
+	display: block;
+	font-size: 12px;
+}
+
+.form-input {
+	padding: 2px 4px;
+	font-size: 12px;
+	border-radius: 5px;
+	border-color: rgba(131, 131, 131, 0.2);
+}
+
+.search-container {
+	position: relative;
+	padding: 1.3em;
+	background-color: #fff;
+	transform: translate(0%, 50%);
+	border: 1px solid rgba(131, 131, 131, 0.2);
+}
+
+.car-search {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 10px;
+}
+
+.sub-container {
+	display: grid;
+	grid-template-columns: auto;
+}
+.sub-container input {
+	display: flex;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.form-sub-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+	column-gap: 10px;
+}
+
+.form-sub-grid label {
+	grid-column-end: span 2;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.form-input {
+	width: 100%;
+}
+
+.search-btn {
+	height: 24px;
+	width: 100%;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.align-end {
+	align-items: flex-end;
+}
+
+.hero {
+	margin-bottom: 30px;
+}
+
+.car-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-rows: auto;
+	gap: 15px;
+	margin-bottom: 100px;
+}
+
+.car-card-info {
+	text-align: center;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 65% auto;
+	margin-top: 5px;
+	border-top: 1px solid rgba(131, 131, 131, 0.5);
+	border-bottom: 1px solid rgba(131, 131, 131, 0.5);
+}
+
+.sub-info {
+	width: 100%;
+	border-right: 1px solid rgba(131, 131, 131, 0.5);
+	overflow-x: auto;
+}
+
+.car-card-info p {
+	font-size: 12px;
+}
+
+.car-card-info span {
+	font-size: 14px;
+}
