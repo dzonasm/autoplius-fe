@@ -5,22 +5,34 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../styles//home.styles.css" />
+        <script src="../JS/home.js" defer></script>
 		<title>Autoplus</title>
 	</head>
 	<body>
 		<header class="header">
-            <nav class="d-flex navbar">
+            <nav class="d-flex navbar container">
+                
                 <div class="logo">
                     Logo
                 </div>
-                <div class="navbar-items d-flex">
-                    <a href="../indexx.html"><button>Home</button></a>
-                    <a href="../html/signUp.html "><button>Register</button></a>
-                    <a href="../html/login.html "><button>Login</button></a>
-                    <a href="../html/profile.html"><button>Profile</button></a>
-                    <a href="search.html"><button>Search</button></a>
-                    <a onclick="logOut()"><button>Logout</button></a>
-                </div>
+                <ul class="nav-links ">
+                    <li class="nav-link">
+                    <a href="../indexx.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/signUp.html ">Register</a>
+                    </li>
+                    <li class="nav-link"> 
+                        <a href="../html/login.html ">Login</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="../html/profile.html">Profile</a>
+                    </li>
+                    <li class="nav-link">
+                        <button>Logout</button>
+                    </li>
+                </ul>
+
             </nav>
 		</header>
         <main>
@@ -31,40 +43,46 @@
                     <button class="cta">Browse Cars</button>
                 </div>
                 <div class="search-container">
-                    <form class="car-search" action="">
+                    <form id='carSearchForm' class="car-search">
                         <div class="form-input-container">
                             <label class="form-label" for="make">Make</label>
-                            <input class="form-input" type="text" name="make">
+                            <input class="form-input" id="carMakeInput" type="text" name="make">
                         </div>
                         <div class="form-input-container">
-                            <label class="form-label" for="make">Make</label>
-                            <input class="form-input" type="text" name="make">
+                            <label class="form-label" for="model">Model</label>
+                            <input class="form-input" id="carModelInput" type="text" name="model">
                         </div>
-                        <div class="form-input-container">
-                            <label class="form-label" for="make">Make</label>
-                            <input class="form-input" type="text" name="make">
-                        </div>
+                        
                         <div class="sub-container">
                             <div class="form-input-container form-sub-grid">
-                                <label class="form-label sub-grid-label" for="make">Make</label>
-                                <input class="form-input w-50 d-flex sub-grid-input"  type="text" name="make">
+                                <label class="form-label sub-grid-label" for="price">Price from to</label>
+                                <input class="form-input w-50 d-flex sub-grid-input" id="carPriceFromInput"  type="text" name="price">
 
-                                <input class="form-input w-50 d-flex sub-grid-input-2" type="text" name="make">
+                                <input class="form-input w-50 d-flex sub-grid-input-2" id="carPriceToInput" type="text" name="price">
                             </div>
 
                         </div>
                         <div class="sub-container">
                             <div class="form-input-container form-sub-grid">
-                                <label class="form-label sub-grid-label" for="make">Make</label>
-                                <input class="form-input w-50 d-flex sub-grid-input"  type="text" name="make">
+                                <label class="form-label sub-grid-label" for="year">Year from to</label>
+                                <input class="form-input w-50 d-flex sub-grid-input" id="carYearFromInput"  type="text" name="year">
 
-                                <input class="form-input w-50 d-flex sub-grid-input-2" type="text" name="make">
+                                <input class="form-input w-50 d-flex sub-grid-input-2" type="text" id="carYearToInput" name="year">
+                            </div>
+
+                        </div>
+                        <div class="sub-container">
+                            <div class="form-input-container form-sub-grid">
+                                <label class="form-label sub-grid-label" for="milage">Milage from to</label>
+                                <input class="form-input w-50 d-flex sub-grid-input" id="carMilageFromInput"  type="text" name="milage">
+
+                                <input class="form-input w-50 d-flex sub-grid-input-2" id='carMilageToInput' type="text" name="milage">
                             </div>
 
                         </div>
                         <div class="d-flex justify-end align-end">
 
-                            <button class="search-btn">Submit</button>
+                            <button type="submit" class="search-btn">Search</button>
                         </div>
                         </form>
                 </div>
