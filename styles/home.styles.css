@@ -16,6 +16,7 @@ img {
 	margin: 0 auto;
 }
 
+
 .navbar {
 	justify-content: space-between;
 	align-items: center;
@@ -32,10 +33,11 @@ img {
 
 .nav-link {
 	padding: 7px 12px;
+
 }
 
-.nav-link:last-child {
-	padding-right: 0;
+.navbar-items{
+	justify-content: space-between;
 }
 
 .nav-link a {
