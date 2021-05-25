@@ -14,11 +14,13 @@ document.getElementById('form').addEventListener('submit', async (event) => {
     if (password !== confirmPassword ) {
         return alert ('wrong password')
     }
+
     let body = {
         email,
         password,
         name,
         phone
+
     }
 
     let response = await fetch(`${url}/user/signUp`, {

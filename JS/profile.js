@@ -1,3 +1,4 @@
+
 let token
 let url = 'http://localhost:3000/api/v1'
 let user
@@ -37,10 +38,10 @@ const showPosts = (data) => {
     for (let car of data) {
         let card =
             `
+
         <div>
           <div>
          <div onclick="deleteCarPost('${car._id}')">x</div>
-         <a href="../html/editCarPost.html"> <div> EDIT </div></a>
            <h3>Post</h3>
             <h5>Car Brand: ${car.carBrand}</h5>
             <p>Car Model: ${car.carModel}</p>
@@ -50,7 +51,6 @@ const showPosts = (data) => {
             <p>Car Price: ${car.carPrice}</p> 
             <div style="background-image: url('${car.carImage}'); height: 200px; background-size: cover "></div>
             <p>Created at: ${car.createdAt}</p>
-            
             
       </div>
     </div>`
@@ -162,3 +162,4 @@ const updateProfile = async () => {
     }
     window.location.reload()
 }
+
