@@ -1,4 +1,3 @@
-
 let token
 let url = 'http://localhost:3000/api/v1'
 let user
@@ -38,7 +37,6 @@ const showPosts = (data) => {
     for (let car of data) {
         let card =
             `
-
         <div>
           <div>
          <div onclick="deleteCarPost('${car._id}')">x</div>
@@ -54,6 +52,7 @@ const showPosts = (data) => {
             
       </div>
     </div>`
+
         let cardContainer = document.querySelector('.myPostContainer')
         cardContainer.innerHTML += card
     }
@@ -162,4 +161,3 @@ const updateProfile = async () => {
     }
     window.location.reload()
 }
-
