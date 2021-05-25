@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
+	transition: all 0.3s ease;
 }
 
 img {
@@ -11,49 +12,50 @@ img {
 }
 
 .container {
-	max-width: 980px;
+	max-width: 1140px;
 	margin: 0 auto;
 }
 
-.navbar{
-	height: 80px;
-	margin: 0;
-	padding: 0;
+.navbar {
 	justify-content: space-between;
 	align-items: center;
-	background: rgb(176,182,186);
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.nav-links {
+	list-style: none;
+	display: flex;
+	align-items: center;
 }
 
-.navbar a{
-	color: white;
-	margin: 0 30px 0 30px;
+.navbar-items {
+	justify-content: space-between;
 }
 
-.navbar a button{
-	padding: 10px 20px;
-	font-family: 'Lato', sans-serif;
-	font-size: 20px;
-	cursor: pointer;
-	background-color: rgba(0,0,0,0.5);
+.nav-link {
+	padding: 7px 12px;
+}
+
+.nav-link:last-child {
+	padding-right: 0;
+}
+
+.nav-link a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav-link button {
+	padding: 4px 9px;
+	border: 1px solid rgba(131, 131, 131, 0.5);
+	background: rgba(131, 131, 144, 0.2);
 	border-radius: 5px;
 }
 
-.navbar a button:hover{
-	background-color: rgba(0,0,0,0.1);
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-	transition: 0.5s;
-}
-
-.navbar-items{
-	justify-content: space-between;
-}
-
 .hero {
-	padding: 5rem 10rem;
+	padding: 3rem 10rem;
 	background-color: rgb(212, 255, 255);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 5rem;
 }
 
 .cta {
@@ -150,13 +152,9 @@ img {
 	align-items: flex-end;
 }
 
-.hero {
-	margin-bottom: 30px;
-}
-
 .car-card-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	grid-template-rows: auto;
 	gap: 15px;
 	margin-bottom: 100px;

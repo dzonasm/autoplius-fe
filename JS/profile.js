@@ -1,27 +1,27 @@
 // @ts-nocheck
 let token;
-let url = 'http://localhost:3000/api/v1';
+let url = "http://localhost:3000/api/v1";
 let user;
 
-window.addEventListener('DOMContentLoaded', () => {
-	token = localStorage.getItem('userauth');
+// window.addEventListener('DOMContentLoaded', () => {
+// 	token = localStorage.getItem('userauth');
 
-	if (!token) return (window.location.href = './login.html');
+// 	if (!token) return (window.location.href = './login.html');
 
-	user = JSON.parse(localStorage.getItem('Autoplius-user'));
-	getMyPosts();
-	setUpNavBar();
-});
+// 	user = JSON.parse(localStorage.getItem('Autoplius-user'));
+// 	getMyPosts();
+// 	setUpNavBar();
+// });
 
 const setUpNavBar = async () => {
 	// if (user.profileImage) document.getElementById('navProfileImage').src = user.profileImage
-	document.querySelector('#userPhone').innerHTML = user.phone;
-	document.querySelector('#userEmail').innerHTML = user.email;
+	document.querySelector("#userPhone").innerHTML = user.phone;
+	document.querySelector("#userEmail").innerHTML = user.email;
 };
 
 const getMyPosts = async () => {
 	let response = await fetch(`${url}/cars/mycars`, {
-		method: 'GET',
+		method: "GET",
 		headers: {
 			userauth: token,
 		},
@@ -52,49 +52,49 @@ const showPosts = data => {
             
       </div>
     </div>`;
-		let cardContainer = document.querySelector('.myPostContainer');
+		let cardContainer = document.querySelector(".myPostContainer");
 		cardContainer.innerHTML += card;
 	}
 };
 const logOut = async () => {
 	let response = await fetch(`${url}/user/logOut`, {
-		method: 'POST',
+		method: "POST",
 		headers: {
-			'Content-Type': 'application/json',
+			"Content-Type": "application/json",
 			userauth: token,
 		},
 	});
-	localStorage.removeItem('userauth');
-	localStorage.removeItem('Autoplius-user');
+	localStorage.removeItem("userauth");
+	localStorage.removeItem("Autoplius-user");
 };
 
-document.querySelector('#carInfo').addEventListener('submit', async e => {
+document.querySelector("#carInfo").addEventListener("submit", async e => {
 	e.preventDefault();
 	const formData = new FormData();
-	let uploadingCar = document.querySelector('#carImage');
-	let carBrand = document.querySelector('#carBrand').value;
-	let carModel = document.querySelector('#carModel').value;
-	let carYear = document.querySelector('#carYear').value;
-	let carMileage = document.querySelector('#carMileage').value;
-	let carPrice = document.querySelector('#carPrice').value;
-	let carDescription = document.querySelector('#carDescription').value;
+	let uploadingCar = document.querySelector("#carImage");
+	let carBrand = document.querySelector("#carBrand").value;
+	let carModel = document.querySelector("#carModel").value;
+	let carYear = document.querySelector("#carYear").value;
+	let carMileage = document.querySelector("#carMileage").value;
+	let carPrice = document.querySelector("#carPrice").value;
+	let carDescription = document.querySelector("#carDescription").value;
 
-	if (!carBrand && !carModel && !carYear && !carMileage && !carPrice) return alert('provide content');
+	if (!carBrand && !carModel && !carYear && !carMileage && !carPrice) return alert("provide content");
 
 	if (uploadingCar.files !== 0) {
-		formData.append('carImage', uploadingCar.files[0]);
+		formData.append("carImage", uploadingCar.files[0]);
 	}
 
-	formData.append('carBrand', carBrand);
-	formData.append('carModel', carModel);
-	formData.append('carYear', carYear);
-	formData.append('carMileage', carMileage);
-	formData.append('carPrice', carPrice);
-	formData.append('carDescription', carDescription);
+	formData.append("carBrand", carBrand);
+	formData.append("carModel", carModel);
+	formData.append("carYear", carYear);
+	formData.append("carMileage", carMileage);
+	formData.append("carPrice", carPrice);
+	formData.append("carDescription", carDescription);
 
 	try {
 		let response = await fetch(`${url}/cars/mycars`, {
-			method: 'POST',
+			method: "POST",
 			headers: {
 				userauth: token,
 			},
@@ -107,7 +107,7 @@ document.querySelector('#carInfo').addEventListener('submit', async e => {
 		let data = await response.json();
 		console.log(data);
 
-		document.querySelector('.myPostContainer').value = '';
+		document.querySelector(".myPostContainer").value = "";
 		thanksmessage();
 	} catch (e) {
 		alert(e);
@@ -115,7 +115,7 @@ document.querySelector('#carInfo').addEventListener('submit', async e => {
 });
 
 function thanksmessage() {
-	document.querySelector('.thanksMessage').innerHTML = '<p>Thanks for posting in our website</p>';
+	document.querySelector(".thanksMessage").innerHTML = "<p>Thanks for posting in our website</p>";
 	setTimeout(function () {
 		window.location.reload(1);
 	}, 2000);
@@ -127,9 +127,9 @@ const deleteCarPost = async id => {
 	};
 
 	let response = await fetch(`${url}/cars/delete`, {
-		method: 'DELETE',
+		method: "DELETE",
 		headers: {
-			'Content-Type': 'application/json',
+			"Content-Type": "application/json",
 			userauth: token,
 		},
 		body: JSON.stringify(body),
@@ -139,12 +139,12 @@ const deleteCarPost = async id => {
 
 const updateProfile = async () => {
 	const formData = new FormData();
-	let profileImgElement = document.getElementById('profileImageInput');
+	let profileImgElement = document.getElementById("profileImageInput");
 
-	formData.append('avatar', profileImgElement.files[0]);
+	formData.append("avatar", profileImgElement.files[0]);
 	try {
 		let response = await fetch(`${url}/user/updateUserInfo`, {
-			method: 'POST',
+			method: "POST",
 			headers: {
 				userauth: token,
 			},
@@ -152,7 +152,7 @@ const updateProfile = async () => {
 		});
 		if (response.status !== 200) throw await response.json();
 		user = await response.json();
-		localStorage.setItem('Autoplius-user', JSON.stringify(user));
+		localStorage.setItem("Autoplius-user", JSON.stringify(user));
 	} catch (e) {
 		console.log(e);
 	}
