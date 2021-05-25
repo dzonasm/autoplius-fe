@@ -15,25 +15,38 @@ img {
 	margin: 0 auto;
 }
 
-.nav {
-	display: flex;
+.navbar{
+	height: 80px;
+	margin: 0;
+	padding: 0;
 	justify-content: space-between;
 	align-items: center;
-	background-color: aliceblue;
+	background: rgb(176,182,186);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-.nav-links {
-	display: flex;
-	align-items: center;
+.navbar a{
+	color: white;
+	margin: 0 30px 0 30px;
 }
 
-.nav-link {
-	list-style: none;
-	padding: 12px 8px;
+.navbar a button{
+	padding: 10px 20px;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
 }
 
-.nav-link:last-child {
-	padding-right: 0;
+.navbar a button:hover{
+	background-color: rgba(0,0,0,0.1);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+
+.navbar-items{
+	justify-content: space-between;
 }
 
 .hero {

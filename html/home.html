@@ -9,15 +9,19 @@
 	</head>
 	<body>
 		<header class="header">
-			<nav class="nav container">
-				<span>LOGO</span>
-				<ul class="nav-links">
-					<li class="nav-link">Home</li>
-					<li class="nav-link">Search</li>
-					<li class="nav-link">Profile</li>
-					<li class="nav-link">Logout</li>
-				</ul>
-			</nav>
+            <nav class="d-flex navbar">
+                <div class="logo">
+                    Logo
+                </div>
+                <div class="navbar-items d-flex">
+                    <a href="../indexx.html"><button>Home</button></a>
+                    <a href="../html/signUp.html "><button>Register</button></a>
+                    <a href="../html/login.html "><button>Login</button></a>
+                    <a href="../html/profile.html"><button>Profile</button></a>
+                    <a href="search.html"><button>Search</button></a>
+                    <a onclick="logOut()"><button>Logout</button></a>
+                </div>
+            </nav>
 		</header>
         <main>
             <section class="hero container">
