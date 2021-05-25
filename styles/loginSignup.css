@@ -1,149 +1,141 @@
-html{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    background: rgb(176,182,186);
-    background: linear-gradient(0deg, rgba(176,182,186,1) 21%, rgba(230,224,214,1) 87%);
+body {
+	min-height: 100vh;
+	background: rgb(176, 182, 186);
+	background: linear-gradient(0deg, rgba(176, 182, 186, 1) 21%, rgba(230, 224, 214, 1) 87%);
 }
 
-
-.m-10{
-    margin: 10px;
+.m-10 {
+	margin: 10px;
 }
 
-.m-15{
-    margin: 15px;
+.m-15 {
+	margin: 15px;
 }
 
 .d-flex {
-    display: flex;
+	display: flex;
 }
 
 .row {
-    flex-direction: row;
+	flex-direction: row;
 }
 
 .column {
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .center {
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
-h1{
-    font-family: 'Lato', sans-serif;
-    font-size: 40px;
+h1 {
+	font-family: "Lato", sans-serif;
+	font-size: 40px;
 }
 
-
-.navbar{
-    height: 80px;
-    width: 300px;
-    margin: 0;
-    padding: 0;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(176,182,186);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+.navbar {
+	display: flex;
+	background: rgb(176, 182, 186);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
 }
 
-.navbar a{
-    color: white;
+.navbar-items a {
+	margin: 5px;
 }
 
-.navbar a button{
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5px;
+.navbar-items a:last-child {
+	margin-right: 0;
 }
 
-.navbar a button:hover{
-    background-color: rgba(0,0,0,0.1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: 0.5s;
+.navbar a {
+	color: white;
 }
 
-.navbar-items{
-    justify-content: space-between;
+.navbar a button {
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
 }
 
-.container{
-    width: 100%;
-    height: 100%;
-    font-size: 25px;
-    font-family: 'Lato', sans-serif;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    ". .";
+.navbar a button:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
 }
 
-
-.image{
-    width: 100%;
-    background-color: #003a80;
+.container {
+	font-size: 25px;
+	font-family: "Lato", sans-serif;
+	display: flex;
+	flex-direction: row;
 }
 
-input{
-    width: 400px;
-    height: 40px;
-    font-size: 15px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgba(0,0,0,0.3);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+.image {
+	width: 100%;
+	background-color: #003a80;
 }
 
-.form-text{
-    font-size: 15px;
+input {
+	width: 400px;
+	height: 40px;
+	font-size: 15px;
+	border: none;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
 }
 
-.btn{
-    width: 400px;
-    height: 40px;
-    border: none;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.1);
-
+.form-text {
+	font-size: 15px;
 }
 
-.btn:hover{
-    box-shadow: 0 5px 15px rgba(0,0,0,0.9);
-    transition: 0.5s;
+.btn {
+	width: 400px;
+	height: 40px;
+	border: none;
+	border-radius: 8px;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
-.register{
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    transition: 0.5s;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    background-color: rgba(0,0,0,0.1);
+.btn:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+	transition: 0.5s;
 }
 
-.register:hover{
-    box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+.register {
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	transition: 0.5s;
+	border-radius: 8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
-.form-control{
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
+.register:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
 }
 
-.register{
-    text-decoration: none;
-    color: black;
+.form-control {
+	font-size: 20px;
+	font-family: "Lato", sans-serif;
+}
+
+.register {
+	text-decoration: none;
+	color: black;
 }
