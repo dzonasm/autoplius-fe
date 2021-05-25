@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../styles//home.styles.css" />
+        <script src="../JS/home.js" defer></script>
 		<title>Autoplus</title>
 	</head>
 	<body>
@@ -41,14 +42,14 @@
                     <button class="cta">Browse Cars</button>
                 </div>
                 <div class="search-container">
-                    <form onsubmit="handleSearch()" class="car-search" action="">
+                    <form id='carSearchForm' class="car-search">
                         <div class="form-input-container">
                             <label class="form-label" for="make">Make</label>
                             <input class="form-input" id="carMakeInput" type="text" name="make">
                         </div>
                         <div class="form-input-container">
                             <label class="form-label" for="model">Model</label>
-                            <input class="form-input" type="text" name="model">
+                            <input class="form-input" id="carModelInput" type="text" name="model">
                         </div>
                         
                         <div class="sub-container">
