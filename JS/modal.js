@@ -6,11 +6,13 @@ const modal = document.querySelectorAll('.img-container img').forEach((el, index
   el.addEventListener('click', () => {
 
     createModal(el)
+
+    //First creating element then adding selector to element btn
     const closeBtn = document.querySelector('.t-right i')
 
 
     closeBtn.addEventListener('click', () => {
-      closeBtn.parentElement.parentElement.parentElement.remove()
+      document.querySelector('.modal-model').remove()
     })
 
     console.log(el.src)
