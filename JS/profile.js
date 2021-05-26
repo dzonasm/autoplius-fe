@@ -189,25 +189,25 @@ const editModal = (carInfo, _id) => {
     let carBrandInput = `
   <div class="input-wrapper">
      <label for="">CarBrand</label>
-     <input type="text" id="carBrand" value="${carInfo.carBrand}">
+     <input type="text" id="carBrandInput" value="${carInfo.carBrand}">
   </div>`;
 
     let carMileageInput = `
   <div class="input-wrapper">
      <label for="">Car Mileage</label>
-     <input type="number" id="carMileage" value="${carInfo.carMileage}">
+     <input type="number" id="carMileageInput" value="${carInfo.carMileage}">
   </div>`;
 
     let carModelInput = `
   <div class="input-wrapper">
      <label for="">Car Model</label>
-     <input type="text" id="carModel" value="${carInfo.carModel}">
+     <input type="text" id="carModelInput" value="${carInfo.carModel}">
   </div>`;
 
     let carPriceInput = `
     <div class="input-wrapper">
       <label for="">Car Prices</label>
-     <input type="number" id="carPrice" value="${carInfo.carPrice}">
+     <input type="number" id="carPriceInput" value="${carInfo.carPrice}">
   </div>`;
 
 
@@ -230,18 +230,18 @@ const editModal = (carInfo, _id) => {
     });
 
     buttonEdit.addEventListener("click", async () => {
-        let carBrand = document.getElementById("carBrand").value;
-        let carMileage = document.getElementById("carMileage").value;
-        let carModel = document.getElementById("carModel").value;
-        let carPrice = document.getElementById("carPrice").value;
+        let carBrand = document.getElementById("carBrandInput").value;
+        let carMileage = document.getElementById("carMileageInput").value;
+        let carModel = document.getElementById("carModelInput").value;
+        let carPrice = document.getElementById("carPriceInput").value;
 
         console.log(carPrice)
 
         let body = {
-            carBrand: "ABC",
+            carBrand,
             carMileage,
-            carModel: "ABC",
-            carPrice: 3000,
+            carModel,
+            carPrice,
             _id
         };
         try {

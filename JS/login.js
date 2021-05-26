@@ -1,16 +1,16 @@
 let url = 'http://localhost:3000/api/v1'
 
-document.getElementById('form').addEventListener('submit', async (e) => {
+document.getElementById('signIn-form').addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    let email = document.getElementById('email').value
-    let password = document.getElementById('password').value
+    let signInEmail = document.getElementById('signIn-email').value
+    let signInPassword = document.getElementById('signIn-password').value
 
-    if (!email || !password) return alert('Enter email and password')
+    if (!signInEmail || !signInPassword) return alert('Enter email and password')
 
     let body = {
-        email,
-        password
+        signInEmail,
+        signInPassword
     }
     try {
         let response = await fetch(`${url}/user/signIn`, {
@@ -32,28 +32,32 @@ document.getElementById('form').addEventListener('submit', async (e) => {
     }
 })
 
-document.getElementById('form1').addEventListener('submit', async (event) => {
+
+document.getElementById('signUp-form').addEventListener('submit', async (event) => {
     event.preventDefault()
 
-    let email = document.getElementById('email').value
-    let password = document.getElementById('password1').value
-    let confirmationPassword = document.getElementById('password2').value
-    let name = document.getElementById('name').value
-    let phone = document.getElementById('phoneNumber').value
+
+    let signUpEmail = document.getElementById('signUp-email').value
+
+    let signUpPassword = document.getElementById('signUp-password').value
+    let signUpConfirmationPassword = document.getElementById('signUp-password2').value
+    let signUpName = document.getElementById('signUp-name').value
+    let signUpPhoneNumber = document.getElementById('signUp-phone').value
 
 
-    if (!email || !password) return alert('Fill in form')
 
-    if (password !== confirmationPassword) {
+    if (!signUpEmail || !signUpPassword) return alert('Fill in form')
+
+    if (signUpPassword !== signUpConfirmationPassword) {
         return console.log("password doesnt match")
     }
 
 
     let body = {
-        email,
-        password,
-        name,
-        phone
+        signUpEmail,
+        signUpPassword,
+        signUpName,
+        signUpPhoneNumber
     }
 
     let response = await fetch(`${url}/user/signUp`, {
@@ -70,15 +74,3 @@ document.getElementById('form1').addEventListener('submit', async (event) => {
     console.log(data)
 
 })
-
-const logOut = async () => {
-    let response = await fetch(`${url}/user/logOut`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'userauth': token
-        }
-    })
-    localStorage.removeItem('userauth')
-    localStorage.removeItem('Autoplius-user')
-}
