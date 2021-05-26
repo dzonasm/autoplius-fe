@@ -186,6 +186,10 @@ img {
 	margin-bottom: 30px;
 }
 
+.hero {
+	margin-bottom: 30px;
+}
+
 .car-card-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -216,6 +220,62 @@ img {
 
 .car-card-info span {
 	font-size: 14px;
+}
+
+/* Modal */
+
+body {
+	position: relative;
+}
+
+.modal {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(214, 214, 214, 0.909);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-container {
+	padding: 2rem 3rem;
+	background-color: rgb(255, 255, 255);
+}
+
+.modal-info-1 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info-1-border {
+	border: 1px solid rgb(200, 200, 200);
+	width: 100%;
+	padding: 0.2rem 2rem 0.4rem 1rem;
+}
+
+.t-right {
+	text-align: right;
+}
+
+.modal-info-2 {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.info-2-wrap {
+	margin-top: 2rem;
+	width: 100%;
+	display: flex;
+}
+
+.ma-left {
+	margin-left: 1rem;
+}
+
+.ma-top {
+	margin-top: 1rem;
 }
 
 /* Modal */
