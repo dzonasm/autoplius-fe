@@ -1,120 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="profile.css">
-</head>
-<body>
-<nav>
-    <a href="../indexx.html">
-        <button>Home</button>
-    </a>
-    <a href="../html/signUp.html ">
-        <button>Register</button>
-    </a>
-    <a href="../html/login.html ">
-        <button>Login</button>
-    </a>
-    <a href="../html/profile.html">
-        <button>Profile</button>
-    </a>
-    <a href="search.html">
-        <button>Search</button>
-    </a>
-    <a onclick="logOut()">
-        <button>Logout</button>
-    </a>
-</nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles//home.styles.css" />
+		<link rel="stylesheet" href="../styles//profile.styles.css" />
+		<script src="../JS/home.js" defer></script>
+		<title>Autoplus</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="d-flex navbar container">
+				<div class="logo">Logo</div>
+				<ul class="nav-links">
+					<li class="nav-link">
+						<a href="../indexx.html">Home</a>
+					</li>
+					<li class="nav-link">
+						<a href="../html/signUp.html ">Register</a>
+					</li>
+					<li class="nav-link">
+						<a href="../html/login.html ">Login</a>
+					</li>
+					<li class="nav-link">
+						<a href="../html/profile.html">Profile</a>
+					</li>
+					<li class="nav-link">
+						<button>Logout</button>
+					</li>
+				</ul>
+			</nav>
+		</header>
+        <main>
+            <div class="container">
+                <div class="userInfo-container">
 
-<div class="container">
-    <div class="userInfo d-flex f-jc-sp-around">
-
-        <div>
-            <label for="profileImageInput">
-                <img class="rounded-circle" style="height: 150px; width:150px; display: block;"
-                     id="navProfileImage"
-                     src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-                     alt="...">
-                <input type="file" id="profileImageInput" style="display: none">
-            </label>
-            <button onclick="updateProfile()">Update</button>
-        </div>
-
-        <div>
-            <div>
-                <p>Your email:</p>
-                <p id="userEmail"></p>
-            </div>
-            <div>
-                <p>Your phone number:</p>
-                <p id="userPhone"></p>
-            </div>
-        </div>
-    </div>
+                    <div class="user">
+                        <p>Your Profile</p>
+                        <h1 id='username'>Name</h1>
 
 
-    <div class="thanksMessage"></div>
-
-    <div>
-        <h2>Create Your post</h2>
-        <form id="carInfo">
-            <div class="d-flex f-jc-sp-around">
-                <div>
-                    <div class="d-flex f-col">
-                        <label for="carBrand">Car Brand</label>
-                        <input id="carBrand">
-                    </div>
-                    <div class="d-flex f-col">
-                        <label for="carModel">Car Model</label>
-                        <input id="carModel">
-                    </div>
-                </div>
-                <div>
-                    <div class="d-flex f-col">
-                        <label for="carYear">Car Year</label>
-                        <input id="carYear">
-                    </div>
-                    <div class="d-flex f-col">
-                        <label for="carMileage">Car Mileage</label>
-                        <input id="carMileage">
-                    </div>
-                </div>
-                <div>
-                    <div class="d-flex f-col">
-                        <label for="carPrice">Car Price</label>
-                        <input id="carPrice">
-                    </div>
-                    <div class="d-flex f-col">
-                        <label for="carDescription">Comment</label>
-                        <input id="carDescription">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label for="carImage">
-                            <img style="height: 150px; width:150px; display: block;"
-                                 id="uploadCar"
-                                 src="data:image/png;base64,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"
-                                 alt="...">
-                            <input type="file" id="carImage">
+                        <label for="profileImageInput">
+                            <img class="rounded-circle" style="height: 150px; width:150px; display: block;"
+                            id="navProfileImage"
+                            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                            alt="...">
+                            <input type="file" id="profileImageInput" style="display: none">
+                            <button onclick="updateProfile()">Update</button>
                         </label>
                     </div>
+
+                    <div class="phoneAndEmail">
+                        <p>Number of posts</p>
+                        <div class="userEmail">
+                            <p>email: </p>
+                            <label for="userEmail">Email</label>
+                            <input type="text" name="userEmail" id="userEmailInput">
+
+                        </div>
+                        <div class="userEmail">
+                            <p>email: </p>
+                            <label for="userEmail">Email</label>
+                            <input type="text" name="userEmail" id="userEmailInput">
+
+                        </div>
+                        <div class="userEmail">
+                            <p>email: </p>
+                            <label for="userEmail">Email</label>
+                            <input type="text" name="userEmail" id="userEmailInput">
+
+                        </div>
+                    </div>
+                    
+                    
                 </div>
-            </div>
-            <div class="d-flex f-jc-center">
-                <button type="submit" class="subPostBtn">Create</button>
-            </div>
-            <br/><br/>
-        </form>
+
+
+				<h2>Create Your post</h2>
+				<form id="carPostForm">
+							<div class="carPostFormControl">
+								<label for="carBrand">Car Brand</label>
+								<input id="carBrand" />
+							</div>
+							<div class="carPostFormControl">
+								<label for="carModel">Car Model</label>
+								<input id="carModel" />
+							</div>
+							<div class="carPostFormControl">
+								<label for="carYear">Car Year</label>
+								<input id="carYear" />
+							</div>
+							<div class="carPostFormControl">
+								<label for="carMileage">Car Mileage</label>
+								<input id="carMileage" />
+							</div>
+							<div class="carPostFormControl">
+								<label for="carPrice">Car Price</label>
+								<input id="carPrice" />
+							</div>
+							<div class="carPostFormControl">
+								<label for="carDescription">Comment</label>
+								<input id="carDescription" />
+							</div>
+						<div>
+							<div>
+								<label for="carImage">
+                                    <input type="file" id="carImage" />
+									
+								</label>
+							</div>
+						</div>
+					
+						<button type="submit" class="subPostBtn">Create</button>
+				</form>
+			</div>
+
+			<div>
+				<div class="myPostContainer d-flex f-jc-sp-around f-wrap"></div>
+			</div>
+		</div>
+
     </div>
+    <section class="car-card-grid container">
+        <div class="card d-flex flex-column">
+            <div class="img-container">
+                <img class="d-flex" src="https://i.pinimg.com/originals/64/40/49/6440497e9c8b96d20dafd1a564fbee4d.jpg" alt="">
+            </div>
+            <div class="car-card-info">
+                <div class="sub-info">
+                    <h5>Toyota Supra</h5>
+                    <p>120 000 km</p>
+                </div>
+                <span>40 000 $</span>
+            </div>
+        </div>
+        <div class="card d-flex flex-column">
+            <div class="img-container">
+                <img class="d-flex" src="https://i.pinimg.com/originals/64/40/49/6440497e9c8b96d20dafd1a564fbee4d.jpg" alt="">
+            </div>
+            <div class="car-card-info">
+                <div class="sub-info">
+                    <h5>Toyota Supra</h5>
+                    <p>120 000 km</p>
+                </div>
+                <span>40 000 $</span>
+            </div>
+        </div>
+    </section>
+</main>
 
-
-    <div>
-        <div class="myPostContainer d-flex f-jc-sp-around f-wrap"></div>
-    </div>
-</div>
-
-<script src="../JS/profile.js"></script>
-</body>
+		<script src="../JS/profile.js"></script>
+	</body>
 </html>
