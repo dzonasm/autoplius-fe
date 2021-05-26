@@ -83,15 +83,3 @@ document.getElementById('signUp-form').addEventListener('submit', async (event) 
     console.log(data)
 
 })
-
-const logOut = async () => {
-    let response = await fetch(`${url}/user/logOut`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'userauth': token
-        }
-    })
-    localStorage.removeItem('userauth')
-    localStorage.removeItem('Autoplius-user')
-}
