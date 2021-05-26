@@ -1,4 +1,5 @@
 const body = document.querySelector('body')
+
 const carMakeInput = document.querySelector("#carMakeInput");
 const carModelInput = document.querySelector("#carModelInput");
 const carPriceFromInput = document.querySelector("#carPriceFromInput");
@@ -10,6 +11,7 @@ const carMilageToInput = document.querySelector("#carMilageToInput");
 const carSearchForm = document.querySelector("#carSearchForm");
 
 carSearchForm.addEventListener("submit", event => {
+
   event.preventDefault();
   console.log(carMakeInput.value);
   console.log(carModelInput.value);
@@ -53,3 +55,4 @@ body.addEventListener('click', () => {
 
 
 // function getAllCars (){}
+
