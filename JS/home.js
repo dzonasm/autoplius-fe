@@ -23,8 +23,6 @@ carSearchForm.addEventListener("submit", event => {
   console.log(carMilageToInput.value);
 });
 
-
-
 // ---Modal
 
 const modal = document.querySelectorAll('.card').forEach((el, index) => {
@@ -41,7 +39,6 @@ const createModal = () => {
 
   const div = document.createElement('div')
   div.classList.add('modal')
-
 
 
 

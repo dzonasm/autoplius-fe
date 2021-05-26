@@ -1,6 +1,6 @@
 let url = 'http://localhost:3000/api/v1'
 
-document.getElementById('form1').addEventListener('submit', async (e) => {
+document.getElementById('form').addEventListener('submit', async (e) => {
     e.preventDefault()
 
     let email = document.getElementById('email').value
@@ -32,32 +32,21 @@ document.getElementById('form1').addEventListener('submit', async (e) => {
     }
 })
 
-const logOut = async () => {
-    let response = await fetch(`${url}/user/logOut`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'userauth': token
-        }
-    })
-    localStorage.removeItem('userauth')
-    localStorage.removeItem('Autoplius-user')
-}
-
-document.getElementById('form').addEventListener('submit', async (event) => {
+document.getElementById('form1').addEventListener('submit', async (event) => {
     event.preventDefault()
 
-
     let email = document.getElementById('email').value
-
     let password = document.getElementById('password1').value
     let confirmationPassword = document.getElementById('password2').value
     let name = document.getElementById('name').value
-    let phoneNumber = document.getElementById('phoneNumber').value
+    let phone = document.getElementById('phoneNumber').value
 
 
     if (!email || !password) return alert('Fill in form')
 
+    if (password !== confirmationPassword) {
+        return console.log("password doesnt match")
+    }
 
 
     let body = {
@@ -65,9 +54,7 @@ document.getElementById('form').addEventListener('submit', async (event) => {
         password,
         name,
         phone
-
     }
-
 
     let response = await fetch(`${url}/user/signUp`, {
         method: 'POST',
