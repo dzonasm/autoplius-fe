@@ -1,7 +1,3 @@
-
-let testVal = 'Bmw'
-
-
 const modal = document.querySelectorAll('.img-container img').forEach((el, index) => {
   el.addEventListener('click', () => {
 
@@ -14,8 +10,6 @@ const modal = document.querySelectorAll('.img-container img').forEach((el, index
     closeBtn.addEventListener('click', () => {
       document.querySelector('.modal-model').remove()
     })
-
-    console.log(el.src)
   })
 })
 
@@ -56,7 +50,7 @@ const createModal = (el) => {
               </div>
               <div class="title-info ma-left">
                   <div class="ma-top">-----</div>
-                  <div class="ma-top">${testVal}</div>
+                  <div class="ma-top">Supra</div>
                   <div class="ma-top">iki baznycios km</div>
                   <div class="ma-top">1991 m</div>
               </div>
