@@ -1,3 +1,4 @@
+
 // @ts-nocheck
 let token;
 let url = "http://localhost:3000/api/v1";
@@ -38,7 +39,6 @@ const showPosts = data => {
         <div>
           <div>
          <div onclick="deleteCarPost('${car._id}')">x</div>
-         <a href="../html/editCarPost.html"> <div> EDIT </div></a>
            <h3>Post</h3>
             <h5>Car Brand: ${car.carBrand}</h5>
             <p>Car Model: ${car.carModel}</p>
@@ -49,8 +49,8 @@ const showPosts = data => {
             <div style="background-image: url('${car.carImage}'); height: 200px; background-size: cover "></div>
             <p>Created at: ${car.createdAt}</p>
             
-            
       </div>
+
     </div>`;
 		let cardContainer = document.querySelector(".myPostContainer");
 		cardContainer.innerHTML += card;
