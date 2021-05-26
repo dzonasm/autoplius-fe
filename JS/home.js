@@ -9,17 +9,17 @@ const carMilageFromInput = document.querySelector("#carMilageFromInput");
 const carMilageToInput = document.querySelector("#carMilageToInput");
 const carSearchForm = document.querySelector("#carSearchForm");
 
-carSearchForm.addEventListener("submit", event => {
-  event.preventDefault();
-  console.log(carMakeInput.value);
-  console.log(carModelInput.value);
-  console.log(carPriceFromInput.value);
-  console.log(carPriceToInput.value);
-  console.log(carYearFromInput.value);
-  console.log(carYearToInput.value);
-  console.log(carMilageFromInput.value);
-  console.log(carMilageToInput.value);
-});
+// carSearchForm.addEventListener("submit", event => {
+//   event.preventDefault();
+//   console.log(carMakeInput.value);
+//   console.log(carModelInput.value);
+//   console.log(carPriceFromInput.value);
+//   console.log(carPriceToInput.value);
+//   console.log(carYearFromInput.value);
+//   console.log(carYearToInput.value);
+//   console.log(carMilageFromInput.value);
+//   console.log(carMilageToInput.value);
+// });
 
 
 
@@ -46,10 +46,7 @@ const createModal = () => {
   body.appendChild(div)
 }
 
-//Close modal
-body.addEventListener('click', () => {
-  console.log(1)
-})
+
 
 
 // function getAllCars (){}

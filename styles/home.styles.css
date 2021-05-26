@@ -210,6 +210,10 @@ body {
   text-align: right;
 }
 
+.t-center {
+  text-align: center;
+}
+
 .modal-info-2 {
   display: flex;
   justify-content: space-evenly;
