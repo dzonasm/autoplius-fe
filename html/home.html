@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../styles//home.styles.css" />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <title>Autoplus</title>
+
 	</head>
 	<body>
 		<header class="header">
@@ -21,6 +22,7 @@
                 <ul class="nav-links">
                     <li class="nav-link">
                         <a href="../indexx.html">Home</a>
+
                     </li>
                     <li class="nav-link">
                         <a href="../html/signUp.html ">Register</a>
@@ -46,40 +48,46 @@
                     <button class="cta">Browse Cars</button>
                 </div>
                 <div class="search-container">
-                    <form class="car-search" action="">
+                    <form id='carSearchForm' class="car-search">
                         <div class="form-input-container">
                             <label class="form-label" for="make">Make</label>
-                            <input class="form-input" type="text" name="make">
+                            <input class="form-input" id="carMakeInput" type="text" name="make">
                         </div>
                         <div class="form-input-container">
-                            <label class="form-label" for="make">Make</label>
-                            <input class="form-input" type="text" name="make">
+                            <label class="form-label" for="model">Model</label>
+                            <input class="form-input" id="carModelInput" type="text" name="model">
                         </div>
-                        <div class="form-input-container">
-                            <label class="form-label" for="make">Make</label>
-                            <input class="form-input" type="text" name="make">
-                        </div>
+                        
                         <div class="sub-container">
                             <div class="form-input-container form-sub-grid">
-                                <label class="form-label sub-grid-label" for="make">Make</label>
-                                <input class="form-input w-50 d-flex sub-grid-input"  type="text" name="make">
+                                <label class="form-label sub-grid-label" for="price">Price from to</label>
+                                <input class="form-input w-50 d-flex sub-grid-input" id="carPriceFromInput"  type="text" name="price">
 
-                                <input class="form-input w-50 d-flex sub-grid-input-2" type="text" name="make">
+                                <input class="form-input w-50 d-flex sub-grid-input-2" id="carPriceToInput" type="text" name="price">
                             </div>
 
                         </div>
                         <div class="sub-container">
                             <div class="form-input-container form-sub-grid">
-                                <label class="form-label sub-grid-label" for="make">Make</label>
-                                <input class="form-input w-50 d-flex sub-grid-input"  type="text" name="make">
+                                <label class="form-label sub-grid-label" for="year">Year from to</label>
+                                <input class="form-input w-50 d-flex sub-grid-input" id="carYearFromInput"  type="text" name="year">
 
-                                <input class="form-input w-50 d-flex sub-grid-input-2" type="text" name="make">
+                                <input class="form-input w-50 d-flex sub-grid-input-2" type="text" id="carYearToInput" name="year">
+                            </div>
+
+                        </div>
+                        <div class="sub-container">
+                            <div class="form-input-container form-sub-grid">
+                                <label class="form-label sub-grid-label" for="milage">Milage from to</label>
+                                <input class="form-input w-50 d-flex sub-grid-input" id="carMilageFromInput"  type="text" name="milage">
+
+                                <input class="form-input w-50 d-flex sub-grid-input-2" id='carMilageToInput' type="text" name="milage">
                             </div>
 
                         </div>
                         <div class="d-flex justify-end align-end">
 
-                            <button class="search-btn">Submit</button>
+                            <button type="submit" class="search-btn">Search</button>
                         </div>
                         </form>
                 </div>
@@ -137,6 +145,9 @@
                 </div>
             </section>
         </main>
-    <script src="../JS/home.js"></script>
+
+        <script src="../JS/home.js" ></script>
+        <script src="../JS/modal.js" ></script>
+
 	</body>
 </html>
