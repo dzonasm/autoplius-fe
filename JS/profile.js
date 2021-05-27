@@ -39,6 +39,7 @@ const showPosts = data => {
 	
 	<div class="card d-flex flex-column">
             <div class="img-container">
+             <button class="edit-event" onclick="editCar(this, '${car._id}')"> Edit</button>
                 <img class="d-flex" src=${
 					car.carImage ? car.carImage : "../images/jonathan-petersson-d3iHpnCI_Yg-unsplash.jpg"
 				} alt="">
@@ -159,7 +160,7 @@ const updateProfile = async () => {
 	window.location.reload();
 };
 
-const editCar = async (el, carId) => {
+const editCar = async (e, carId) => {
 	let body = {
 		id: carId,
 	};
@@ -185,38 +186,48 @@ const editModal = (carInfo, _id) => {
 	div.classList.add("edit-modal");
 
 	let carBrandInput = `
-  <div class="input-wrapper">
-     <label for="">CarBrand</label>
-     <input type="text" id="carBrand">
+  <div>
+     <label for="carBrandEdit">CarBrand</label>
+     <input type="text" id="carBrandEdit" value="${carInfo.carBrand}">
   </div>`;
 
 	let carMileageInput = `
-  <div class="input-wrapper">
-     <label for="">Car Mileage</label>
-     <input type="text" id="carMileage">
+  <div>
+     <label for="carMileageEdit">Car Mileage</label>
+     <input type="number" id="carMileageEdit" value="${carInfo.carMileage}">
   </div>`;
 
 	let carModelInput = `
-  <div class="input-wrapper">
-     <label for="">Car Model</label>
-     <input type="text" id="carModel">
+  <div>
+     <label for="carModelEdit">Car Model</label>
+     <input type="text" id="carModelEdit" value="${carInfo.carModel}">
   </div>`;
 
 	let carPriceInput = `
-    <div class="input-wrapper">
-      <label for="">Car Prices</label>
-     <input type="text" id="carPriceInput">
+    <div>
+      <label for="carPriceEdit">Car Prices</label>
+     <input type="number" id="carPriceEdit" value="${carInfo.carPrice}">
+  </div>`;
+
+	let carYearInput = `
+    <div>
+      <label for="carYearEdit">Car Year</label>
+     <input type="number" id="carYearEdit" value="${carInfo.carYear}">
+  </div>`;
+
+	let carCommentInput = `
+    <div>
+      <label for="carCommentEdit">Description</label>
+     <input type="text" id="carCommentEdit" value="${carInfo.carDescription}">
   </div>`;
 
 	let buttonCancel = document.createElement("button");
-	buttonCancel.classList.add("btn", "btn-danger");
 	buttonCancel.innerText = "Cancel";
 
 	let buttonEdit = document.createElement("button");
-	buttonEdit.classList.add("btn", "btn-primary");
 	buttonEdit.innerText = "Edit";
 
-	div.innerHTML = carBrandInput + carMileageInput + carModelInput + carPriceInput;
+	div.innerHTML = carBrandInput + carMileageInput + carModelInput + carPriceInput + carYearInput + carCommentInput;
 
 	div.appendChild(buttonCancel);
 	div.appendChild(buttonEdit);
@@ -226,20 +237,21 @@ const editModal = (carInfo, _id) => {
 	});
 
 	buttonEdit.addEventListener("click", async () => {
-		let carBrand = document.querySelector("#carBrand").value;
-		let carMileage = document.querySelector("#carMileage").value;
-		let carModel = document.querySelector("#carModel").value;
-		let carPriceInput = document.querySelector("#carPriceInput");
-		let carPrice = Number(carPriceInput.value);
+		let carBrand = document.querySelector("#carBrandEdit").value;
+		let carMileage = document.querySelector("#carMileageEdit").value;
+		let carModel = document.querySelector("#carModelEdit").value
+		let carPrice = document.querySelector("#carPriceEdit").value
+		let carYear = document.querySelector("#carYearEdit").value
+		let carDescription = document.querySelector("#carCommentEdit").value
 
-		console.log(carPriceInput);
-		console.log(carPrice);
 
 		let body = {
-			carBrand: "ABC",
+			carBrand,
 			carMileage,
-			carModel: "ABC",
-			carPrice: 3000,
+			carModel,
+			carPrice,
+			carYear,
+			carDescription,
 			_id,
 		};
 		try {
