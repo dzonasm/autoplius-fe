@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>Sign up</title>
+		<link rel="stylesheet" href="../styles/home.styles.css" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -13,14 +14,28 @@
 	</head>
 
 	<body>
-		<nav>
-			<a href="../indexx.html"><button>Home</button></a>
-			<a href="../html/signUp.html "><button>Register</button></a>
-			<a href="../html/login.html "><button>Login</button></a>
-			<a href="../html/profile.html"><button>Profile</button></a>
-			<a href="search.html"><button>Search</button></a>
-			<a onclick="logOut()"><button>Logout</button></a>
-		</nav>
+		<header class="header">
+			<nav class="d-flex navbar container">
+				<div class="logo">Logo</div>
+				<ul class="nav-links">
+					<li class="nav-link">
+						<a href="../html/home.html">Home</a>
+					</li>
+					<li class="nav-link">
+						<a href="../html/signUp.html ">Register</a>
+					</li>
+					<li class="nav-link">
+						<a href="../html/login.html ">Login</a>
+					</li>
+					<li class="nav-link">
+						<a href="../html/profile.html">Profile</a>
+					</li>
+					<li class="nav-link">
+						<button>Logout</button>
+					</li>
+				</ul>
+			</nav>
+		</header>
 		<div class="container-sm mt-5 d-flex flex-column align-items-center mb-5">
 			<h2 class="mb-4">Register</h2>
 			<form class="w-50" id="form">
