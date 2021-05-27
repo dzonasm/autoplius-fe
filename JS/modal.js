@@ -1,23 +1,23 @@
-const modal = document.querySelectorAll('.img-container img').forEach((el, index) => {
-  el.addEventListener('click', () => {
+document.querySelectorAll(".img-container").forEach((el, index) => {
+	console.log("modal loaded");
+	el.addEventListener("click", () => {
+		console.log("hello from modal");
+		createModal(el);
 
-    createModal(el)
+		//First creating element then adding selector to element btn
+		const closeBtn = document.querySelector(".t-right i");
 
-    //First creating element then adding selector to element btn
-    const closeBtn = document.querySelector('.t-right i')
+		closeBtn.addEventListener("click", () => {
+			document.querySelector(".modal-model").remove();
+		});
+	});
+});
 
+const createModal = el => {
+	const div = document.createElement("div");
+	div.classList.add("modal-model");
 
-    closeBtn.addEventListener('click', () => {
-      document.querySelector('.modal-model').remove()
-    })
-  })
-})
-
-const createModal = (el) => {
-  const div = document.createElement('div')
-  div.classList.add('modal-model')
-
-  div.innerHTML = `
+	div.innerHTML = `
   <div class="modal">
   <div class="modal-container">
 
@@ -60,9 +60,6 @@ const createModal = (el) => {
 
   </div>
 </div>
-  `
-  body.appendChild(div)
-}
-
-
-
+  `;
+	body.appendChild(div);
+};

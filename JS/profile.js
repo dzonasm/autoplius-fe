@@ -33,24 +33,6 @@ const getMyPosts = async () => {
 	showPosts(data);
 };
 
-//     <div>
-//       <div>
-//      <button onclick="deleteCarPost('${car._id}')">x</button>
-
-//        <button class="edit-event" onclick="editCar(this, '${car._id}')"> Edit</button>
-//        <h3>Post</h3>
-//         <h5>Car Brand: ${car.carBrand}</h5>
-//         <p>Car Model: ${car.carModel}</p>
-//         <p>Car Description: ${car.carDescription}</p>
-//         <p>Car Mileage: ${car.carMileage}</p>
-//         <p>Car Year: ${car.carYear}</p>
-//         <p>Car Price: ${car.carPrice}</p>
-//         <div style="background-image: url('${car.carImage}'); height: 200px; background-size: cover "></div>
-//         <p>Created at: ${car.createdAt}</p>
-
-//   </div>
-
-// </div>
 const showPosts = data => {
 	for (let car of data) {
 		let card = `
