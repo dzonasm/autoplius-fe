@@ -1,5 +1,6 @@
 let url = "http://localhost:3000/api/v1";
 
+
 document.getElementById("form").addEventListener("submit", async e => {
 	e.preventDefault();
 
@@ -31,3 +32,4 @@ document.getElementById("form").addEventListener("submit", async e => {
 		alert(e.message);
 	}
 });
+
