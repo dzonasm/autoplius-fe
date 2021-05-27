@@ -1,3 +1,4 @@
+
 const modal = document.querySelectorAll('.img-container img').forEach((el, index) => {
   el.addEventListener('click', () => {
 
@@ -28,7 +29,7 @@ const createModal = (el) => {
       <div class="modal-title ma-top t-center">Supra</div>
 
       <div class="modal-img ma-top ">
-          <img src=${el.src} alt="">
+          <img src=${el.target.src} alt="">
       </div>
 
       <div class="modal-info-1">
@@ -63,6 +64,4 @@ const createModal = (el) => {
   `
   body.appendChild(div)
 }
-
-
 
