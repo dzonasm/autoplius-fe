@@ -8,7 +8,7 @@
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
 .container {
@@ -57,12 +57,12 @@ img {
 }
 
 .nav-link {
-	list-style: none;
-	padding: 12px 8px;
+  list-style: none;
+  padding: 12px 8px;
 }
 
 .nav-link:last-child {
-	padding-right: 0;
+  padding-right: 0;
 }
 
 .nav-link a {
@@ -106,38 +106,39 @@ img {
 	background-image: url("https://images.unsplash.com/photo-1520608760-eff2c44afa2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
     grid-template-columns: 1fr 1fr;
     margin-bottom: 5rem;
+
 }
 
 .cta {
-	width: 120px;
-	padding: 4px 0;
+  width: 120px;
+  padding: 4px 0;
 }
 
 .hero-text {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .hero-text h4 {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .hero-text h1 {
-	margin-bottom: 1.2em;
-	font-size: 2em;
+  margin-bottom: 1.2em;
+  font-size: 2em;
 }
 
 .form-label {
-	display: block;
-	font-size: 12px;
+  display: block;
+  font-size: 12px;
 }
 
 .form-input {
-	padding: 2px 4px;
-	font-size: 12px;
-	border-radius: 5px;
-	border-color: rgba(131, 131, 131, 0.2);
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 5px;
+  border-color: rgba(131, 131, 131, 0.2);
 }
 
 .search-container {
@@ -146,67 +147,65 @@ img {
 	background-color: #fff;
 	transform: translate(0%, 25%);
 	border: 1px solid rgba(131, 131, 131, 0.2);
+
 }
 
 .car-search {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto auto;
-	gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
 }
 
 .sub-container {
-	display: grid;
-	grid-template-columns: auto;
+  display: grid;
+  grid-template-columns: auto;
 }
 .sub-container input {
-	display: flex;
+  display: flex;
 }
 
 .d-flex {
-	display: flex;
+  display: flex;
 }
 
 .flex-column {
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .form-sub-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto 1fr;
-	column-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 10px;
 }
 
 .form-sub-grid label {
-	grid-column-end: span 2;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+  grid-column-end: span 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .form-input {
-	width: 100%;
+  width: 100%;
 }
 
 .search-btn {
-	height: 24px;
-	width: 100%;
-	border-radius: 5px;
-	border: 1px solid rgba(131, 131, 131, 0.5);
-	background: rgba(131, 131, 144, 0.2);
+  height: 24px;
+  width: 100%;
 }
 
 .justify-end {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .align-end {
-	align-items: flex-end;
+  align-items: flex-end;
 }
 
 .hero {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .hero {
@@ -218,35 +217,95 @@ img {
 }
 
 .car-card-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	grid-template-rows: auto;
-	gap: 15px;
-	margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: auto;
+  gap: 15px;
+  margin-bottom: 100px;
 }
 
 .car-card-info {
-	text-align: center;
-	display: grid;
-	place-items: center;
-	grid-template-columns: 65% auto;
-	margin-top: 5px;
-	border-top: 1px solid rgba(131, 131, 131, 0.5);
-	border-bottom: 1px solid rgba(131, 131, 131, 0.5);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 65% auto;
+  margin-top: 5px;
+  border-top: 1px solid rgba(131, 131, 131, 0.5);
+  border-bottom: 1px solid rgba(131, 131, 131, 0.5);
 }
 
 .sub-info {
-	width: 100%;
-	border-right: 1px solid rgba(131, 131, 131, 0.5);
-	overflow-x: auto;
+  width: 100%;
+  border-right: 1px solid rgba(131, 131, 131, 0.5);
+  overflow-x: auto;
 }
 
 .car-card-info p {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .car-card-info span {
-	font-size: 14px;
+  font-size: 14px;
+}
+
+/* Modal */
+
+body {
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(214, 214, 214, 0.909);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  padding: 2rem 3rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.modal-info-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-1-border {
+  border: 1px solid rgb(200, 200, 200);
+  width: 100%;
+  padding: 0.2rem 2rem 0.4rem 1rem;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.modal-info-2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info-2-wrap {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+}
+
+.ma-left {
+  margin-left: 1rem;
+}
+
+.ma-top {
+  margin-top: 1rem;
 }
 
 @media (max-width: 800px) {

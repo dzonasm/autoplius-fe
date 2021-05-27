@@ -1,23 +1,24 @@
-document.querySelectorAll(".img-container").forEach((el, index) => {
-	console.log("modal loaded");
-	el.addEventListener("click", () => {
-		console.log("hello from modal");
-		createModal(el);
 
-		//First creating element then adding selector to element btn
-		const closeBtn = document.querySelector(".t-right i");
+const modal = document.querySelectorAll('.img-container img').forEach((el, index) => {
+  el.addEventListener('click', () => {
 
-		closeBtn.addEventListener("click", () => {
-			document.querySelector(".modal-model").remove();
-		});
-	});
-});
+    createModal(el)
 
-const createModal = el => {
-	const div = document.createElement("div");
-	div.classList.add("modal-model");
+    //First creating element then adding selector to element btn
+    const closeBtn = document.querySelector('.t-right i')
 
-	div.innerHTML = `
+
+    closeBtn.addEventListener('click', () => {
+      document.querySelector('.modal-model').remove()
+    })
+  })
+})
+
+const createModal = (el) => {
+  const div = document.createElement('div')
+  div.classList.add('modal-model')
+
+  div.innerHTML = `
   <div class="modal">
   <div class="modal-container">
 
@@ -28,7 +29,7 @@ const createModal = el => {
       <div class="modal-title ma-top t-center">Supra</div>
 
       <div class="modal-img ma-top ">
-          <img src=${el.src} alt="">
+          <img src=${el.target.src} alt="">
       </div>
 
       <div class="modal-info-1">
@@ -60,6 +61,7 @@ const createModal = el => {
 
   </div>
 </div>
-  `;
-	body.appendChild(div);
-};
+  `
+  body.appendChild(div)
+}
+
