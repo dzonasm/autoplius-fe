@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.userInfo-container {
+	background-color: rgb(212, 255, 255);
+	padding: 3rem 10rem;
+	background-color: rgb(212, 255, 255);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 5rem;
+}
+
+#carPostForm {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 15px;
+	margin-bottom: 50px;
+}
+
+.subPostBtn {
+	height: 28px;
+}
+
+.phoneAndEmail {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
