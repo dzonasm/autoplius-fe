@@ -190,10 +190,14 @@ img {
 	margin-bottom: 30px;
 }
 
+.image-container img {
+	object-fit: contain;
+}
+
 .car-card-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	grid-template-rows: auto;
+	grid-template-rows: repeat(auto-fill, 300px);
 	gap: 15px;
 	margin-bottom: 100px;
 }
